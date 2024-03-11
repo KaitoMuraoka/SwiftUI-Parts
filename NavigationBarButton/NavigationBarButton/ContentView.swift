@@ -39,8 +39,10 @@ struct ContentView: View {
             }
             .navigationTitle("Sample")
             .toolbar(content: {
-                Button("Save") {
-                    print("Save tapped")
+                ToolbarItemGroup(placement: .topBarLeading) {
+                    Button("Save") {
+                        print("Save tapped")
+                    }
                 }
             })
         }
