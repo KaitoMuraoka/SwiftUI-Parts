@@ -39,10 +39,12 @@ struct ContentView: View {
             }
             .navigationTitle("Sample")
             .toolbar(content: {
-                ToolbarItemGroup(placement: .topBarLeading) {
-                    Button("Save") {
-                        print("Save tapped")
-                    }
+                ToolbarItemGroup(placement: .topBarTrailing) {
+                    Button(action: {
+                        print("Save Tapped")
+                    }, label: {
+                        Label("Save", systemImage: "square.and.arrow.down")
+                    })
                 }
             })
         }
